@@ -1,0 +1,18 @@
+1.Using CSS and HTML design two column and 3 column layout
+2. Design your class routine using HTML table
+3. Write a code for the position relative ,absolute and fixed  and make simple html CSS template using position CSS
+4. Using css3.0 design attractive 3d effect buttons 
+5. Design simple webpages using HTML 5 and css3.0
+6. Using jQuery develop and validate  a form containing 
+first name ,last name , mobile number gender, 
+date of birth,   country ,email ,photo 
+upload all the field must not be empty 
+,mobile numbermust be numeric,date of birth 
+must have calender and photo upload must be 1mb size
+6. Design simple templete using xslt concept
+7. Write a XML validation program using internal,external DTD and XSD
+8. Using ajax design a comment page and display 
+    immediately comment below the comment box 
+        after submit
+9. Using PHP and mysql develop the user login form
+10. Simple design a website using CRUD operations

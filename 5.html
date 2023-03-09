@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <form id="frm" action="#">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname">
+        <br>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname">
+        <br>
+        <label for="mobile">Mobile</label>
+        <input type="tel" id="mobile" name="mobile">
+        <br>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+            <option value="n">Not Say</option>
+        </select>
+        <br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+        <br>
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country">
+        <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <label for="photo">Photo</label>
+        <input type="file" id="photo" name="photo">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        jQuery.validator.addMethod('filesize', function (value, element, param) {
+            return this.optional(element) || (element.files[0].size <= param * 1000000)
+        }, `File size must be less than ${param} MB`);
+        jQuery("#frm").validate({
+            rules: {
+                fname: "required",
+                lname: "required",
+                mobile: {
+                    required: true,
+                    number: true
+                },
+                gender: "required",
+                dob: "required",
+                country: "required",
+                email: {
+                    required: true,
+                    email: true,
+                },
+                photo: {
+                    required: true,
+                    filesize: 1,
+                },
+            },
+            messages: {
+                fname: "Required",
+                lname: "Required",
+                mobile: {
+                    required: "Required",
+                    number: "Should be Number"
+                },
+                gender: "Required",
+                dob: "Required",
+                country: "Required",
+                email: {
+                    required: "Required",
+                    email: "Invalid email Format",
+                },
+                photo: {
+                    required: 'Required',
+                    filesize: "File size should be less than 1 MB",
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>

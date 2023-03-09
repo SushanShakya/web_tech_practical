@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Column Layout</title>
+    <style>
+        .col {
+            display: flex;
+        }
+
+        .c1,
+        .c2, 
+        .c3 {
+            height: 100px;
+            flex: 1;
+        }
+
+        .c1 {
+            background-color: green;
+        }
+
+        .c2 {
+            background-color: dodgerblue;
+        }
+        .c3 {
+            background-color: rosybrown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col">
+        <div class="c1">Column 1</div>
+        <div class="c2">Column 2</div>
+    </div>
+
+    <br>
+
+    <div class="col">
+        <div class="c1">Column 1</div>
+        <div class="c2">Column 2</div>
+        <div class="c3">Column 2</div>
+    </div>
+</body>
+
+</html>

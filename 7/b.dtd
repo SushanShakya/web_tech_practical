@@ -1,0 +1,6 @@
+<!DOCTYPE note [
+    <!ELEMENT note (id, title, writer)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT writer (#PCDATA)>
+]>

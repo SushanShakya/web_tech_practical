@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        .parent {
+            position: relative;
+            height: 80vh;
+            background-color: dodgerblue;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            height: 50px;
+            width: 50px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            height: 80px;
+            width: 80px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="center"></div>
+    </div>
+    <div class="fixed"></div>
+</body>
+
+</html>

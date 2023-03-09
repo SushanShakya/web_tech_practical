@@ -1,0 +1,30 @@
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="xml" encoding="utf-8" indent="no"/>
+    <xsl:template match="/">
+        <html>
+            <head> 
+                <title> Table </title>
+            </head>
+
+            <body>
+                <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Book Author</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:apply-template select="book">
+                </tbody>
+                </table>
+            </body>
+        </html>
+    <xsl:template>
+    <xsl:template match="book">
+        <tr>
+            <td><xsl:value-of select="name" /></td>
+            <td><xsl:value-of select="author" /></td>
+        </tr>
+    </xsl:template>
+</xsl:stylesheet>
